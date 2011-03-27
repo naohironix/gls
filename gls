@@ -1,0 +1,20 @@
+#!/bin/sh
+#
+# gls is a graphical version of ls.
+#
+# It graphically displays files which are specified by operands.  If a operand
+# is a directory then it displays files in the directory.  If no operand is
+# specified then it displays files in the current working directory such as ls.
+#
+# It uses w3m to display images on a terminal and gls.scm requires Gauche.
+# w3m: <http://w3m.sourceforge.net/index.en.html>
+# Gauche: <http://practical-scheme.net/gauche/index.html>
+#
+# The following options are available:
+# -l   Display images as large size
+# -m   Display images as middle size
+# -s   Display images as small size
+#
+# Copyright (c) 2011 Naohiro Nishikawa <naohironix@gmail.com>
+#
+gls.scm $*|w3m -T text/html
